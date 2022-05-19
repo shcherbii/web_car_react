@@ -22,16 +22,6 @@ function App() {
   const [isAccount, setAccount] = useState(false);
 
   const [isLoginAcount, setLoginAcount] = useState(false);
-  let token = localStorage.getItem('token');
-  
-  // console.log(typeof(token));
-  useEffect(() => {
-    if(token !== 'null'){
-      setLoginAcount(true);
-    }else{
-      setLoginAcount(false);
-    }
-  }, isLoginAcount, token);
 
   const LogOut = () => {
     setLoginAcount(false);
