@@ -10,16 +10,24 @@ import CarInfo from './component/car_info/car_info';
 import Login from './component/login/login';
 import Register from './component/register/register'
 import Account from './component/account/account'
+import Add_car from './component/add_car/add_car'
+
 import {useEffect, useState} from 'react';
 
 
+
 function App() {
+  
+  
+
+
   const [isHome, setIsHome] = useState(true);
   const [isCars, setIsCars] = useState(false);
   const [isRentCars, setIsRentCars] = useState(false);
   const [isLogin, setLogin] = useState(false);
   const [isRegister, setRegister] = useState(false);
   const [isAccount, setAccount] = useState(false);
+  const [isAddCar, setAddCar] = useState(false);
 
   const [isLoginAcount, setLoginAcount] = useState(false);
   let token = localStorage.getItem('token');
@@ -36,7 +44,8 @@ function App() {
   const LogOut = () => {
     setLoginAcount(false);
     localStorage.setItem('token', "null");
-    localStorage.setItem('login', "null");
+    localStorage.setItem('user_status', "null");
+    localStorage.setItem('idUser', "null")
     window.location.reload();
   }
 
@@ -47,6 +56,7 @@ function App() {
     setLogin(false);
     setRegister(false);
     setAccount(false);
+    setAddCar(false);
   }
   const carsHandler = () => {
     setIsCars(true);
@@ -55,6 +65,7 @@ function App() {
     setLogin(false);
     setRegister(false);
     setAccount(false);
+    setAddCar(false);
   }
 
   const carRentsHandler = () => {
@@ -64,6 +75,7 @@ function App() {
     setLogin(false);
     setRegister(false);
     setAccount(false);
+    setAddCar(false);
   }
 
   const loginHandler = () => {
@@ -73,6 +85,7 @@ function App() {
     setIsRentCars(false);
     setRegister(false);
     setAccount(false);
+    setAddCar(false);
   }
 
   const RegisterHandler = () => {
@@ -82,6 +95,7 @@ function App() {
     setIsCars(false);
     setIsRentCars(false);
     setAccount(false);
+    setAddCar(false);
   }
 
   const AccountHandler = () => {
@@ -91,6 +105,16 @@ function App() {
     setIsHome(false);
     setIsCars(false);
     setIsRentCars(false);
+    setAddCar(false);
+  }
+  const AddCarHandler = () => {
+    setAccount(false);
+    setRegister(false);
+    setLogin(false);
+    setIsHome(false);
+    setIsCars(false);
+    setIsRentCars(false);
+    setAddCar(true);
   }
   return (
     <div>
@@ -100,7 +124,7 @@ function App() {
       {isHome && <PopularCars carsHandler={carsHandler}/>}
 
       {isCars && <CarsTitle/>}
-      {isCars && <Cars carRentsHandler={carRentsHandler}/>}
+      {isCars && <Cars carRentsHandler={carRentsHandler} AddCarHandler={AddCarHandler} />}
 
       {isRentCars && <RentCar/>}
       {isRentCars && <CarInfo/>}
@@ -110,6 +134,8 @@ function App() {
       {isRegister && <Register/>}
 
       {isAccount && <Account LogOut={LogOut}/>}
+
+      {isAddCar && <Add_car />}
       <Footer/>
     </div>
   );

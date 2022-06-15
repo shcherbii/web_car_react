@@ -5,14 +5,14 @@
   font-size: 14px;
   background: gainsboro;
   width: 100%;
-  padding: 10px 10px;
+  padding: 5px 10px;
   margin: 15px -10px;
 }
 
 .main_head_register {
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 600px;
+  height: 650px;
   position: relative;
 }
 
@@ -64,7 +64,7 @@
   color: #fff;
   font-size: 16px;
   text-transform: uppercase;
-  width: 80px;
+  width: 100px;
   padding: 10px 0;
   margin-top: 10px;
   margin-left: -5px;

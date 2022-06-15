@@ -1,7 +1,6 @@
 .car_list {
     max-width: 1200px;
     padding-top: 70px;
-    padding-bottom: 70px;
     margin: 0 auto;
     padding-left: 25px;
     padding-right: 25px;
@@ -77,5 +76,64 @@
     background-color: #1289d5;
     padding: 15px;
     margin-left: 370px;
+    
   }
-  
+
+  .delete_car_opacity{
+    opacity: 1;
+    text-align: center;
+    font-family: "Asap", sans-serif;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 120px;
+    padding: 10px 0;
+    margin-top: 30px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: #f45b69;
+    
+  }
+  .delete_car_opacity:hover{
+    background-color: #f24353;
+    
+  }
+  .delete_car_unopacity{
+    opacity: 0;
+    position: absolute;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Muli:wght@300;400;600;800&display=swap');
+.container{
+  max-width: 1200px;
+    padding-top: 70px;
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.comment__box {
+    list-style-type: none;
+    padding-left: 0;
+}
+.comment__box .comment h6 {
+    font-weight: 800;
+}
+p {
+    font-size: 16px;
+}
+.comment {
+    animation: something .6s ease forwards;
+}
+
+@keyframes something {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+

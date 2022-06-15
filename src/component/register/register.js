@@ -80,7 +80,7 @@ const Register = (props) => {
                     <input id = "phone" type="text" placeholder="Phone" onChange={onChangePhone}/>
                     <input id = "email" type="text" placeholder="Email" onChange={onChangeEmail}/>
                     <input id = "password" type="password" placeholder="Password" onChange={onChangePassword}/>
-                    <button type='submit' id = "reg_button" onClick={sentRegisterRequest}>Login</button>
+                    <button type='submit' id = "reg_button" onClick={sentRegisterRequest}>Register</button>
                 </div>
             </div>
         </div>
